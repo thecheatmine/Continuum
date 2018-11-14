@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@drawable/ic_carre_blue"
+        android:duration="200"/>
+
+    <item
+        android:drawable="@drawable/ic_carre_green"
+        android:duration="200"/>
+
+    <item
+        android:drawable="@drawable/ic_carre_red"
+        android:duration="200"/>
+
+</animation-list>

@@ -1,37 +1,18 @@
 package com.continuum.continuum;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.content.pm.ActivityInfo;
-import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
-
-    private GameView gameView;
+public class SinglePlayerChoice extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_single_player_choice);
         hideSystemUI();
-
-        Button btn=(Button)findViewById(R.id.Bouton_Histoire);
-        btn.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View v)
-            {
-                Intent myIntent = new Intent(MainActivity.this, SinglePlayerChoice.class);
-                MainActivity.this.startActivity(myIntent);
-            }
-        });
-
-        gameView=new GameView(this);
-
-        // et on l'affiche.
-        setContentView(gameView);
     }
 
     @Override

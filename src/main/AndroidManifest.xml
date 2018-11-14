@@ -19,6 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".HistoireActivity"
+            android:label="@string/title_activity_histoire"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SinglePlayerChoice"
+            android:label="@string/title_activity_single_player_choice"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

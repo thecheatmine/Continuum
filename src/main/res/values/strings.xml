@@ -2,4 +2,9 @@
     <string name="app_name">Continuum</string>
     <string name="action_settings">Settings</string>
     <string name="logo_name">Logo de continuum</string>
+    <string name="Singleplayer">Histoire</string>
+    <string name="Multiplayer">Multijoueur</string>
+    <string name="title_activity_histoire">HistoireActivity</string>
+    <string name="title_singleplayerchoice">SinglePlayerChoice</string>
+    <string name="title_activity_single_player_choice">SinglePlayerChoice</string>
 </resources>
