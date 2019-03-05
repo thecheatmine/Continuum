@@ -15,8 +15,7 @@ public class GameLoopThread extends Thread
     private boolean running = false; // état du thread, en cours ou non
 
     // constructeur de l'objet, on lui associe l'objet view passé en paramètre
-    public GameLoopThread(
-            GameView view) {
+    public GameLoopThread(GameView view) {
         this.view = view;
     }
 

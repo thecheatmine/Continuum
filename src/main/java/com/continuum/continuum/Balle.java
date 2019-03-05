@@ -30,71 +30,71 @@ class Balle
 
         // on attribue à l'objet "Balle" l'image passée en paramètre
         // w et h sont sa largeur et hauteur définis en pixels
-        public BitmapDrawable setImage(
-        final Context c, final int
-        ressource, final int w, final int h)
-        {
-            Drawable dr = c.getResources().getDrawable(ressource);
-            Bitmap bitmap = ((BitmapDrawable) dr).getBitmap();
-            return new BitmapDrawable(c.getResources(), Bitmap.createScaledBitmap(bitmap, w, h, true));
-        }
-
-        // retourne 'true' si la balle se déplace automatiquement
-        // 'false' sinon
-        // car on la bloque sous le doigt du joueur lorsqu'il la déplace
-        public boolean isMoving() {
-        return move;
+    public BitmapDrawable setImage(
+    final Context c, final int
+    ressource, final int w, final int h)
+    {
+        Drawable dr = c.getResources().getDrawable(ressource);
+        Bitmap bitmap = ((BitmapDrawable) dr).getBitmap();
+        return new BitmapDrawable(c.getResources(), Bitmap.createScaledBitmap(bitmap, w, h, true));
     }
 
-        // définit si oui ou non la balle doit se déplacer automatiquement
-        // car on la bloque sous le doigt du joueur lorsqu'il la déplace
-        public void setMove(boolean move) {
-        this.move = move;
+    // retourne 'true' si la balle se déplace automatiquement
+    // 'false' sinon
+    // car on la bloque sous le doigt du joueur lorsqu'il la déplace
+    public boolean isMoving() {
+    return move;
     }
 
-        // redimensionnement de l'image selon la largeur/hauteur de l'écran passés en paramètre
-        public void resize(int wScreen, int hScreen)
-        {
-            // wScreen et hScreen sont la largeur et la hauteur de l'écran en pixel
-            // on sauve ces informations en variable globale, car elles serviront
-            // à détecter les collisions sur les bords de l'écran
-            wEcran=wScreen;
-            hEcran=hScreen;
-
-            // on définit (au choix) la taille de la balle à 1/5ème de la largeur de l'écran
-            balleW=wScreen/5;
-            balleH=wScreen/5;
-            img = setImage(mContext,R.mipmap.ball,balleW,balleH);
-        }
-
-        // définit la coordonnée X de la balle
-        public void setX(int x) {
-        this.x = x;
+    // définit si oui ou non la balle doit se déplacer automatiquement
+    // car on la bloque sous le doigt du joueur lorsqu'il la déplace
+    public void setMove(boolean move) {
+    this.move = move;
     }
 
-        // définit la coordonnée Y de la balle
-        public void setY(int y) {
-        this.y = y;
+    // redimensionnement de l'image selon la largeur/hauteur de l'écran passés en paramètre
+    public void resize(int wScreen, int hScreen)
+    {
+        // wScreen et hScreen sont la largeur et la hauteur de l'écran en pixel
+        // on sauve ces informations en variable globale, car elles serviront
+        // à détecter les collisions sur les bords de l'écran
+        wEcran=wScreen;
+        hEcran=hScreen;
+
+        // on définit (au choix) la taille de la balle à 1/5ème de la largeur de l'écran
+        balleW=wScreen/5;
+        balleH=wScreen/5;
+        img = setImage(mContext,R.mipmap.ball,balleW,balleH);
     }
 
-        // retourne la coordonnée X de la balle
-        public int getX() {
-        return x;
+    // définit la coordonnée X de la balle
+    public void setX(int x) {
+    this.x = x;
     }
 
-        // retourne la coordonnée Y de la balle
-        public int getY() {
-        return y;
+    // définit la coordonnée Y de la balle
+    public void setY(int y) {
+    this.y = y;
     }
 
-        // retourne la largeur de la balle en pixel
-        public int getBalleW() {
-        return balleW;
+    // retourne la coordonnée X de la balle
+    public int getX() {
+    return x;
     }
 
-        // retourne la hauteur de la balle en pixel
-        public int getBalleH() {
-        return balleH;
+    // retourne la coordonnée Y de la balle
+    public int getY() {
+    return y;
+    }
+
+    // retourne la largeur de la balle en pixel
+    public int getBalleW() {
+    return balleW;
+    }
+
+    // retourne la hauteur de la balle en pixel
+    public int getBalleH() {
+    return balleH;
     }
 
         // déplace la balle en détectant les collisions avec les bords de l'écran

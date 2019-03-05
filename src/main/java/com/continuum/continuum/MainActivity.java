@@ -9,8 +9,6 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private GameView gameView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,17 +16,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         hideSystemUI();
 
-        Button btn=(Button)findViewById(R.id.Bouton_Histoire);
+        Button btn= findViewById(R.id.Bouton_Histoire);
         btn.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
             {
-                Intent myIntent = new Intent(MainActivity.this, SinglePlayerChoice.class);
+                Intent myIntent = new Intent(MainActivity.this, HistoireActivity.class);
                 MainActivity.this.startActivity(myIntent);
             }
         });
 
-        gameView=new GameView(this);
+        GameView gameView = new GameView(this);
 
         // et on l'affiche.
         setContentView(gameView);

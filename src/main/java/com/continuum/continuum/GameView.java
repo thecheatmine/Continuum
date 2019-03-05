@@ -3,15 +3,20 @@ package com.continuum.continuum;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
+import android.support.constraint.ConstraintLayout;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.widget.ImageView;
 
 public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     // déclaration de l'objet définissant la boucle principale de déplacement et de rendu
     private GameLoopThread gameLoopThread;
     private Balle balle;
+    private Personnage perso1;
+
 
     // création de la surface de dessin
     public GameView(Context context) {
@@ -22,6 +27,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         // création d'un objet "balle", dont on définira la largeur/hauteur
         // selon la largeur ou la hauteur de l'écran
         balle = new Balle(this.getContext());
+        perso1 = new Personnage();
     }
 
     // Fonction qui "dessine" un écran de jeu
@@ -36,9 +42,11 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         balle.draw(canvas);
     }
 
+
     // Fonction appelée par la boucle principale (gameLoopThread)
     // On gère ici le déplacement des objets
     public void update() {
+        //perso1.moveWithSpeed();
         balle.moveWithCollisionDetection();
     }
 
